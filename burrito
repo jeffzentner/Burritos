@@ -1,0 +1,11 @@
+$customer = get_next_customer();
+$burrito = new Burrito();
+$tortilla = new Tortilla();
+$tortilla->warm();
+$burrito->add($tortilla);
+$burrito->add(get_rice());
+$meat = new Meat($customer->prompt('Meat?'));
+
+if ($meat) {
+  $burrito->add($meat);
+}
