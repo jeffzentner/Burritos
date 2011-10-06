@@ -9,3 +9,5 @@ $meat = new Meat($customer->prompt('Meat?'));
 if ($meat) {
   $burrito->add($meat);
 }
+
+include('beans');
